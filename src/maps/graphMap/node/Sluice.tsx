@@ -3,6 +3,8 @@ import {LargeReservoirType} from '../../../data/nodeType/largeReservoirType'
 import { SluiceType } from '../../../data/nodeType/SluiceType'
 import { useSelectPlus } from '../../../hooks/useSelectPlus'
 import {Color} from '../index'
+import {useDispatch} from "react-redux";
+import {setSelectedNode} from "../../../store/reducer/selectedNodeReducer";
 
 type Props = {
 	// 左上角x坐标
@@ -17,10 +19,12 @@ type Props = {
 }
 
 export function Sluice({x, y, width = 25, height = 60, nodeName}: Props) {
-	
-	const data:SluiceType[] = useSelectPlus('sluice',nodeName);
+
+	const data = useSelectPlus('sluice',nodeName);
+	const dispatch = useDispatch()
 	const handleClick = () => {
 		console.log(data);
+		dispatch(setSelectedNode({nodeType:"sluice",nodeName}))
 	}
 	return (
 		<>

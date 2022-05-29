@@ -2,6 +2,8 @@ import {FloodAreaType} from "../../../data/nodeType/FloodAreaType";
 import {Color} from "../index";
 import {Tributary} from "./Tributary";
 import {useSelectPlus} from "../../../hooks/useSelectPlus";
+import {useDispatch} from "react-redux";
+import {setSelectedNode} from "../../../store/reducer/selectedNodeReducer";
 
 type FloodAreaProps = {
     rectX:number,
@@ -29,9 +31,10 @@ export function FloodArea({
     const textY = rectY+rectHeight/1.5
 
     const data = useSelectPlus('floodArea',nodeName) || {name:nodeName}
-
+    const dispatch = useDispatch()
     const handleClick = () => {
         console.log(data)
+        dispatch(setSelectedNode({nodeType:'floodArea',nodeName}))
     }
     return (
        <>

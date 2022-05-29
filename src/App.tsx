@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import 'antd/dist/antd.css'
 import {FontPage} from './views/fontPage'
 
 function App() {

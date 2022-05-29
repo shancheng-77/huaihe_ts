@@ -4,13 +4,8 @@ import React from 'react'
 import ControlStation from '../node/ControlStation'
 import {useSelectPlus} from '../../../hooks/useSelectPlus'
 
-type Props = {
-	// 与上河道接点坐标
-	x: number,
-	topY: number
-}
 
-export function DaHongHe({x, topY}: Props) {
+export function DaHongHe() {
 
 	return (
 		<>

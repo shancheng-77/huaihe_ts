@@ -5,7 +5,7 @@ import {ControlStationType, getControlStationData} from './nodeType/ControlStati
 import {getSluiceData, SluiceType} from './nodeType/SluiceType'
 import {FloodAreaType, getFloodAreaData} from "./nodeType/FloodAreaType";
 import {FloodStorageAreaType, getFloodStorageAreaData} from "./nodeType/FloodStorageAreaType";
-type props = {
+export type NodeInfoProps = {
 	tributary: TributaryType[];
 	largeReservoir: LargeReservoirType[];
 	controlStation: ControlStationType[];
@@ -14,7 +14,7 @@ type props = {
 	floodStorageArea:FloodStorageAreaType[]
 }
 // const tributaryData =
-export const nodeInfo:props = {
+export const nodeInfo:NodeInfoProps = {
 	tributary:[
 		getTributaryData('大洪河1', [114.300576,32.870515]),
 		getTributaryData('大洪河2', [114.300576,32.870515]),

@@ -8,6 +8,8 @@
  */
 import {TributaryType} from '../../../data/nodeType/TributaryType'
 import { useSelectPlus } from '../../../hooks/useSelectPlus'
+import {useDispatch} from "react-redux";
+import {setSelectedNode} from "../../../store/reducer/selectedNodeReducer";
 
 type Props = {
 	// 起点x坐标
@@ -48,16 +50,19 @@ export function Tributary({
 							  direction = 'top',
 							  nodeName
 						  }: Props) {
-
 	const data = useSelectPlus('tributary',nodeName) || {name:nodeName}
+	const dispatch = useDispatch();
+
 	const bgColor = 'black';
 	const endY = ((y2) => {
 			const a = hasMarker ? y2 - 10 : y2
 		 	const b =  mode === 'vertical' ? a : y2
 		return direction === 'top'?b :b+20
 	})(y2)
+
 	const handleClick = () => {
 		console.log(data)
+		dispatch(setSelectedNode({nodeType:'tributary',nodeName}))
 	}
 	return (
 		<>

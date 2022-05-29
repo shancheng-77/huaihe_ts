@@ -2,6 +2,8 @@
 import {Color} from "../index";
 import {Tributary} from "./Tributary";
 import {useSelectPlus} from "../../../hooks/useSelectPlus";
+import {useDispatch} from "react-redux";
+import {setSelectedNode} from "../../../store/reducer/selectedNodeReducer";
 
 type FloodStorageAreaProps = {
     rectX:number,
@@ -31,9 +33,10 @@ export function FloodStorageArea({
     const textY = textMode === 'horizontal-tb' ?rectY+rectHeight/1.5 :rectY+rectHeight/3
 
     const data = useSelectPlus('floodStorageArea',nodeName) || {name:nodeName}
-
+    const dispatch = useDispatch();
     const handleClick = () => {
-        console.log(data)
+        console.log(data);
+        dispatch(setSelectedNode({nodeType:"floodStorageArea",nodeName}))
     }
     return (
         <>

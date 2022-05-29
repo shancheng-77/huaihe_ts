@@ -3,6 +3,7 @@ import {useDispatch} from 'react-redux'
 import {setStatus} from '../../../store/reducer/graph/controlStation'
 import {ControlStationType} from '../../../data/nodeType/ControlStationType'
 import { useSelectPlus } from '../../../hooks/useSelectPlus'
+import {setSelectedNode} from "../../../store/reducer/selectedNodeReducer";
 
 type Props = {
 	x: number,
@@ -14,10 +15,10 @@ type Props = {
 
 export function ControlStation({x, y, width = 60, height = 25, nodeName}:Props) {
 	const data = useSelectPlus('controlStation',nodeName)
-
 	const dispatch = useDispatch();
 	const handleClick = () => {
 		dispatch(setStatus({id:data.id,status:'warning'}))
+		dispatch(setSelectedNode({nodeType:"controlStation",nodeName}))
 		console.log(data)
 	}
 	return (

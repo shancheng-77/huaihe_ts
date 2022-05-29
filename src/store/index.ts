@@ -5,6 +5,7 @@ import tributaryReducer from './reducer/graph/tributary'
 import sluiceReducer from './reducer/graph/sluice'
 import floodAreaReducer from "./reducer/graph/floodArea";
 import floodStorageAreaReducer from "./reducer/graph/floodStorageArea";
+import selectedNodeReducer from "./reducer/selectedNodeReducer";
 export const store = configureStore({
 	reducer: {
 		controlStation:controlStationReducer,
@@ -13,8 +14,8 @@ export const store = configureStore({
 		sluice:sluiceReducer,
 		floodArea: floodAreaReducer,
 		floodStorageArea:floodStorageAreaReducer,
+		selectedNode:selectedNodeReducer
 	},
 })
-
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch

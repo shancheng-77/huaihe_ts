@@ -13,6 +13,7 @@ export type LargeReservoirState = {
 }
 
 export type WaterLevelInfo = {
+	max:number;
 	normal: number;
 	warning: number;
 	disaster: number;
@@ -47,10 +48,11 @@ export const getLargeReservoirData = (name: string, location: Location, river: s
 	},
 	status: 'normal',
 	waterLevelInfo: {
+		max:300,
 		normal: 150,
 		warning: 200,
 		disaster: 250,
-		now: 280 // 当前水位
+		now: 180 // 当前水位
 	},
 	date:Date.now()
 })

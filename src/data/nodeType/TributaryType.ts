@@ -24,7 +24,7 @@ export type TributaryType = {
 	date:number
 }
 // 生成假数据的函数
-export const getTributaryData = (name: string, location: Location): TributaryType => ({
+export const getTributaryData = (name: string, location: Location,nowWaterLevel:number=120): TributaryType => ({
 	id: uuidV4(),
 	name: name,
 	type: 'tributary',
