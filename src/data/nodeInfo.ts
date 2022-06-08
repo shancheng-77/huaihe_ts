@@ -16,6 +16,7 @@ export type NodeInfoProps = {
 // const tributaryData =
 export const nodeInfo:NodeInfoProps = {
 	tributary:[
+		getTributaryData('淮河',[113.296855,32.407403]),
 		getTributaryData('大洪河1', [114.300576,32.870515]),
 		getTributaryData('大洪河2', [114.300576,32.870515]),
 		getTributaryData('大洪河3', [114.300576,32.870515]),
@@ -58,7 +59,7 @@ export const nodeInfo:NodeInfoProps = {
 		getTributaryData('淠河8',[0,0])
 	],
 	largeReservoir: [
-		getLargeReservoirData('薄山',[113.954867,32.651731],'大洪河'),
+		getLargeReservoirData('薄山',[113.945895,32.642693],'大洪河'),
 		getLargeReservoirData('板桥',[113.599575,32.969612],'大洪河'),
 		getLargeReservoirData('宿鸭湖',[114.254084,32.98977],'大洪河'),
 		getLargeReservoirData('石漫滩',[113.563684,33.287683],'大洪河'),

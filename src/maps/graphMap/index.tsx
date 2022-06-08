@@ -1,11 +1,3 @@
-/*
- * @Author: 山城月 1175869440@qq.com
- * @Date: 2022-05-19 10:58:19
- * @LastEditors: 山城月 1175869440@qq.com
- * @LastEditTime: 2022-05-23 19:35:07
- * @FilePath: \huaihe_ts\src\maps\graphMap\index.tsx
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- */
 import React, {useEffect, useRef, useState} from 'react'
 // @ts-ignore
 import { MapInteractionCSS } from 'react-map-interaction';
@@ -18,8 +10,8 @@ import {FloodAreaWithRiver} from "./node/FloodArea";
 import {FloodStorageAreaWithRiver} from "./node/FloodStorageArea";
 import {TanHe} from "./tributary/TanHe";
 import {BaiLuHe} from "./tributary/BaiLuHe";
-import {ShiHe} from "./tributary/ShiHe";
-import {PiHe} from "./tributary/PiHe";
+import { ShiHe } from './tributary/ShiHe';
+import { PiHe } from './tributary/PiHe';
 
 // type Props = {
 // 	width: number,
@@ -38,7 +30,7 @@ export const Color = {
 }
 
 export function GraphMap() {
-	const [viewBoxX,setViewBoxX] = useState(410)
+    const [viewBoxX,setViewBoxX] = useState(410)
 	const [viewBoxY,setViewBoxY] = useState(20)
 	const [viewBoxHeight, setViewBoxHeight] = useState(900)
 	const [viewBoxWidth, setViewBoxWidth] = useState(800)

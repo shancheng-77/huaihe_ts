@@ -16,6 +16,7 @@
     "@uiw/react-baidu-map": "^2.4.0",
     "antd": "^4.20.6",
     "echarts-for-react": "^3.0.2",
+    "gcoord": "^0.3.2",
     "gl-matrix": "^3.4.3",
     "react": "^18.1.0",
     "react-bmapgl": "^0.2.4",
@@ -50,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/bmapgl": "^0.0.5"
   }
 }

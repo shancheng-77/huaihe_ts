@@ -6,7 +6,7 @@ import {getTributaryData} from "../data/nodeType/TributaryType";
  * @param nodeType 节点类型
  * @param nodeName 节点名称
  */
-type NodeType = keyof NodeInfoProps
+export type NodeType = keyof NodeInfoProps
 export function getNodeData(nodeType:NodeType,nodeName:string) {
     // 生成50 - 100 的数组
     const data = Array(7).fill(0).map(n => Math.floor(Math.random()*50+50))
